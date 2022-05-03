@@ -9,8 +9,8 @@
                         <div class="row justify-content-between align-items-center">
                             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
                                 <div class="hero__caption">
-                                    <h1 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">Let’s vaping together</h1>
-                                    <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Our vape shop is not only a variety of vaping products, but also an operational support service.</p>
+                                    <h1 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">Disposable Vape Kits</h1>
+                                    <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">The most vape-licious of flavours consisting of succulent fusions of fruit, a confection of desserts, stimulating bursts of delicious drinks and a hint for mint with the menthol choice.</p>
                                     <!-- Hero-btn -->
                                     <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s" data-duration="2000ms">
                                         <router-link to="/shop" class="btn hero-btn">Shop Now</router-link>
