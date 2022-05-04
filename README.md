@@ -1,4 +1,4 @@
-# ecom-app
+# E-commerce web application for E-Cigarette Products
 
 ## Project setup
 ```
@@ -15,14 +15,23 @@ npm run serve
 npm run build
 ```
 
-### Run your unit tests
+### Run Unit Tests with [Jest](https://jestjs.io/docs/api)
+
 ```
 npm run test:unit
 ```
 
-### Run your end-to-end tests
+### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
+
 ```
-npm run test:e2e
+npm run build
+npm run test:e2e 
+```
+
+### Lints and fixes files
+
+```
+npm run lint
 ```
 
 ### Customize configuration
