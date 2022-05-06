@@ -62,7 +62,7 @@ export default {
                 });
             }else{
                 notification['error']({
-                    message: 'OUUPS!',
+                    message: 'OOPS!',
                     description:'Please verify your email',
                 });
             }

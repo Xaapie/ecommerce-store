@@ -1,3 +1,4 @@
+<!--Banner on homepage for shipping, payments, tracking-->
 <template>
     <div class="shop-method-area">
         <div class="container">

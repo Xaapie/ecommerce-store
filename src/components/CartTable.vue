@@ -1,3 +1,4 @@
+<!-- Shopping cart table page-->
 <template>
     <div class="container-fluid">
         <div class="row justify-content-center">

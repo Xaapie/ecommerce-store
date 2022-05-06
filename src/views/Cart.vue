@@ -5,7 +5,7 @@
       <!--================Cart Area =================-->
       <section class="cart_area section_padding">
         <div  v-if="cart.length > 0"  class="container-fluid">
-          <a-alert v-if="!checkShipping" style="margin-bottom: 10px;" message="Can you please update your shipping address before proceeding to checkout" type="error" />
+          <a-alert v-if="!checkShipping" style="margin-bottom: 10px;" message="Please update your shipping address on the Dashboard before proceeding to checkout" type="error" />
           <div class="cart_inner">
             <div class="table-responsive">
               <table class="table">

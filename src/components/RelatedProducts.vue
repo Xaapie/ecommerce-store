@@ -1,3 +1,4 @@
+<!-- Related products -->
 <template>
     <div class="container">
         <div class="row">

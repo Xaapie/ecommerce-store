@@ -88,12 +88,12 @@ export default {
             });
             if(type=="success"){
                 notification['success']({
-                    message: 'Welcome back',
-                    description:'Happy to see you again',
+                    message: 'Welcome',
+                    description:'Happy to see you!',
                 });
             }else{
                 notification['error']({
-                    message: 'OUUPS!',
+                    message: 'Oops!',
                     description:'Please verify your email or password',
                 });
             }

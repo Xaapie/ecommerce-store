@@ -73,7 +73,7 @@ export default {
                 });
             }else{
                 notification['error']({
-                    message: 'OUUPS!',
+                    message: 'Oops!',
                     description:'Can you try to contact us another time',
                 });
             }

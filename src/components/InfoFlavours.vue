@@ -1,3 +1,4 @@
+<!-- Flavours info -->
 <template>
     <div class="container">
         <div class="row">

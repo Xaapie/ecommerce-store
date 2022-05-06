@@ -1,3 +1,4 @@
+<!-- Product cart page-->
 <template>
     <td>
         <div class="media">

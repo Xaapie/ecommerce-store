@@ -1,3 +1,4 @@
+<!-- Whish list page-->
 <template>
     <div class="single-popular-items mb-50 text-center">
         <div class="popular-img">

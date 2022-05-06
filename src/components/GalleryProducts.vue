@@ -1,3 +1,4 @@
+<!-- Product images in the shop page-->
 <template>
     <div class="gallery-area">
         <div class="container-fluid p-0 fix">

@@ -1,3 +1,4 @@
+<!-- Wish List page after adding a product -->
 <template>
     <div class="container-fluid">
         <div class="row justify-content-center">

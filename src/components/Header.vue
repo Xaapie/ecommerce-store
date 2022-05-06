@@ -1,3 +1,4 @@
+<!-- Header -->
 <template>
     <header>
         <div class="header-area">

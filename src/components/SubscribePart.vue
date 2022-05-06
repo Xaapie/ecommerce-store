@@ -1,3 +1,4 @@
+<!-- Subscribe section not implemented-->
 <template>
     <section class="subscribe_part section_padding">
         <div class="container">

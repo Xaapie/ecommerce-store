@@ -6,6 +6,7 @@ import NotFound from '../views/NotFound.vue'
 import { auth } from '../firebase'
 import store from '../store/index'
 
+//routes to different pages 
 const routes = [
   {
     path: '/',

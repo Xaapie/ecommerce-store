@@ -1,3 +1,4 @@
+<!-- Delivery Information section for: Free shipping, Quick payment, Tracking number, Mon-Fri -->
 <template>
     <div class="container-fluid">
         <div class="row">

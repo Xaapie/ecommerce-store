@@ -1,3 +1,4 @@
+<!-- Footer -->
 <template>
     <footer>
         <div class="footer-area footer-padding">
@@ -52,7 +53,7 @@
                 <div class="row align-items-center">
                     <div class="col-xl-7 col-lg-8 col-md-7">
                         <div class="footer-copy-right">
-                            <p></p>                  
+                            <p>Copyright 2022 © Disposable Vape Kits</p>                  
                         </div>
                     </div>
                     <div class="col-xl-5 col-lg-4 col-md-5">

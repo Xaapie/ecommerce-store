@@ -1,3 +1,4 @@
+<!-- New arrivals section on the Homepage-->
 <template>
   <section class="new-product-area section-padding30">
     <div class="container">
@@ -5,7 +6,7 @@
       <div class="row">
         <div class="col-xl-12">
           <div class="section-tittle mb-70">
-            <h2>New Arrivals</h2>
+            <h2>New Arrivals Coming Soon</h2>
           </div>
         </div>
       </div>
@@ -17,7 +18,7 @@
             </div>
             <div class="product-caption">
               <h3>
-                <a href="product_details.html">Thermo Ball Etip Gloves</a>
+                <a href="product_details.html">Triple vape kit</a>
               </h3>
               <span>£25</span>
             </div>
@@ -30,7 +31,7 @@
             </div>
             <div class="product-caption">
               <h3>
-                <a href="product_details.html">Thermo Ball Etip Gloves</a>
+                <a href="product_details.html">Dual vape kit</a>
               </h3>
               <span>£50</span>
             </div>
@@ -43,7 +44,7 @@
             </div>
             <div class="product-caption">
               <h3>
-                <a href="product_details.html">Thermo Ball Etip Gloves</a>
+                <a href="product_details.html">Ocean blue kit</a>
               </h3>
               <span>£75</span>
             </div>

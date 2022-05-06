@@ -116,7 +116,7 @@ export default {
                 });
             }else{
                 notification['error']({
-                    message: 'OUUPS!',
+                    message: 'Oops!',
                     description:'Please verify your information before register',
                 });
             }
