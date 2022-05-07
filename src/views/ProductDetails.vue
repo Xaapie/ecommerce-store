@@ -1,3 +1,4 @@
+<!-- Product Details Page-->
 <template>
     <Layout>
         <TitlePage title="Product Details"/>

@@ -1,3 +1,4 @@
+<!-- Wishlist page-->
 <template>
     <Layout>
         <TitlePage title="Wish List"/>

@@ -1,3 +1,4 @@
+<!-- Load Return Policy page-->
 <template>
     <Layout>
         <TitlePageCustom title="Return Policy" />

@@ -1,3 +1,4 @@
+<!-- Search page -->
 <template>
     <Layout>
         <TitlePage title="Shop"/>

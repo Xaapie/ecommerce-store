@@ -1,3 +1,4 @@
+<!-- Payment waiting animation-->
 <template>
   <Layout>
     <div class="payment__card">

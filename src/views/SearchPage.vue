@@ -1,3 +1,4 @@
+<!-- Search bar-->
 <template>
     <div>
         

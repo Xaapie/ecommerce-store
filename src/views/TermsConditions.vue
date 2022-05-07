@@ -1,3 +1,4 @@
+<!-- Load Terms & Conditions Policy page-->
 <template>
     <Layout>
         <TitlePageCustom title="Terms & Conditions"/>

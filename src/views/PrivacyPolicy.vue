@@ -1,3 +1,4 @@
+<!-- Load Privacy Policy page-->
 <template>
     <Layout>
         <TitlePageCustom title="Privacy Policy"/>
