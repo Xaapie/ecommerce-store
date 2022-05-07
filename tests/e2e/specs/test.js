@@ -1,5 +1,6 @@
 // https://docs.cypress.io/api/introduction/api.html
 
+//  5 e2e tests done
 describe("Login Page", () => {
   it("Check display of login form", () => {
     cy.visit("/login");
