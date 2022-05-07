@@ -1,3 +1,4 @@
+<!-- Load FAQ page-->
 <template>
     <Layout>
         <TitlePageCustom title="Frequently Asked Questions"/>

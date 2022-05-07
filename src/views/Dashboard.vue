@@ -1,3 +1,4 @@
+<!-- Dashbord Page-->
 <template>
     <Layout>
         <TitlePage title="Dashboard" />
