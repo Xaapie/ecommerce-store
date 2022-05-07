@@ -9,7 +9,7 @@
                     <div class="login_part_text text-center">
                         <div class="login_part_text_iner">
                             <h2>New to our Shop?</h2>
-                            <p>Well what you’ve had is good, but what we have is better. Go on, treat your taste buds and Sign Up.</p>
+                            <p>Well, what you’ve had is good, but what we have is better. Go on, treat your taste buds and Sign Up.</p>
                             <router-link to="/register" class="btn_3">Create an Account</router-link>
                         </div>
                     </div>
@@ -17,8 +17,8 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="login_part_form">
                         <div class="login_part_form_iner">
-                            <h3>Welcome to Disposable Vape Kit Online Store! <br>
-                                Enter your Email and Password to Sign In </h3>
+                            <h3>Welcome <br>
+                                Enter your email & password to Sign In!</h3>
                             <a-alert v-if="lengthPass && lengthPass < 8" style="margin-bottom: 10px;" message="Passwords must be at least 8 characters in length" type="error" />
                             <a-alert v-if="checkEmail" style="margin-bottom: 10px;" message="We just need to verify your email address before you can access, can you please check your inbox." type="error" />
                             <form @submit.prevent="handleSubmit" class="row contact_form">

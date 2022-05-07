@@ -1,3 +1,4 @@
+<!-- Handle page errors-->
 <template>
 <div>
     <Layout>
