@@ -1,3 +1,4 @@
+<!-- Header and footer-->
 <template>
     <div>
         <Header/>
