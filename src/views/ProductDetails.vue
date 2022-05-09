@@ -35,7 +35,7 @@
                             <h4 class="price">Price: <span>£{{ getFinalPrice }}</span></h4>
                             <h4 class="quantity">Quantity: </h4>
                                 <div class="product_count d-inline-block">
-                                    <a-input-number min="1" v-model:value="qte" addon-before="Qte"></a-input-number>
+                                    <a-input-number min="1" v-model:value="qty" addon-before="Qty"></a-input-number>
                                 </div>
                             <table class="custom_table">
                                 <thead>
@@ -119,7 +119,7 @@ export default {
         return{
             product:{},
             flavour: 'Select Flavour',
-            qte: 1,
+            qty: 1,
             discounts:[],
             flavours:[],
             mainImage: '',
@@ -161,7 +161,7 @@ export default {
                         price: this.product.price,
                         price_id: this.product.price_id,
                         flavour: this.flavour,
-                        qte: this.qte,
+                        qty: this.qty,
                         owner: auth.currentUser.uid,
                         image: this.product.image,
                     }
@@ -200,11 +200,11 @@ export default {
             let finalPrice = this.product.price
             this.discounts.forEach(element => {
                 if(element.max){
-                    if(this.qte >= element.min && this.qte <= element.max){
+                    if(this.qty >= element.min && this.qty <= element.max){
                         finalPrice = element.discount
                     }
                 }else{
-                    if(this.qte >= element.min){
+                    if(this.qty >= element.min){
                         finalPrice = element.discount
                     }
                 }
@@ -263,7 +263,7 @@ export default {
 .ant-carousel :deep(.slick-slide h3) {
   color: #fff;
 }
-.qte__product, .price__product {
+.qty__product, .price__product {
     margin:0px;
 }
 

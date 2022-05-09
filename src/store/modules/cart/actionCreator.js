@@ -19,11 +19,11 @@ const actions = {
     removeItem({commit}, id){
         commit('REMOVE_ITEM', id)
     },
-    incrementQte({commit}, data){
-        commit('INCREMENT_QTE', data)
+    incrementQty({commit}, data){
+        commit('INCREMENT_QTY', data)
     },
-    decrementQte({commit}, data){
-        commit('DECREMENT_QTE', data)
+    decrementQty({commit}, data){
+        commit('DECREMENT_QTY', data)
     },
     clearCart({commit}){
         commit('CLEAR_CART')

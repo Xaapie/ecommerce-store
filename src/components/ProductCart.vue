@@ -20,12 +20,12 @@
     <td>
         <div class="product_count">
         <span class="input-number-decrement" @click="decrement"> <i class="ti-minus"></i></span>
-            <input class="input-number" type="text" v-model="qte_final" min="0" max="10">
+            <input class="input-number" type="text" v-model="qty_final" min="0" max="10">
         <span class="input-number-increment" @click="increment"> <i class="ti-plus"></i></span>
         </div>
     </td>
     <td>
-        <h5>£{{ (qte_final * product.price).toFixed(2) }}</h5>
+        <h5>£{{ (qty_final * product.price).toFixed(2) }}</h5>
     </td>
     <td> 
         <a-button type="primary" size="default" danger @click="deleteItem">
@@ -46,7 +46,7 @@ export default {
     },
     data(){
         return{
-            qte_final: this.product.qte,
+            qty_final: this.product.qty,
             discounts: []
         }
     },
@@ -56,13 +56,13 @@ export default {
             let priceID = ''
             this.discounts.forEach(element => {
                 if(element.max){
-                    if(this.qte_final >= element.min && this.qte_final <= element.max){
+                    if(this.qty_final >= element.min && this.qty_final <= element.max){
                         finalPrice = element.discount
                         priceID = element.price_id
                         
                     }
                 }else{
-                    if(this.qte_final >= element.min){
+                    if(this.qty_final >= element.min){
                         finalPrice = element.discount
                         priceID = element.price_id
                     }
@@ -83,7 +83,7 @@ export default {
                     let item = {
                         old_price_id: old_price_id,
                         price_id: priceID,
-                        quantity: this.qte_final
+                        quantity: this.qty_final
                     }
                     this.$emit('updateLine', item)
                 })
@@ -95,34 +95,34 @@ export default {
     },
     methods:{
         increment(){
-            ++this.qte_final
+            ++this.qty_final
             let data ={
                 id: this.product.id,
                 flavour: this.product.flavour,
             }
-            this.$store.dispatch('incrementQte', data).then(() => {
+            this.$store.dispatch('incrementQty', data).then(() => {
                 let item = {
                     old_price_id: this.product.price_id,
                     price_id: this.product.price_id,
-                    quantity: this.qte_final
+                    quantity: this.qty_final
                 }
                 this.$emit('updateLine', item)
             })
         },
         decrement(){
-            --this.qte_final;
-            if(this.qte_final < 0){
-                this.qte_final = 0
+            --this.qty_final;
+            if(this.qty_final < 0){
+                this.qty_final = 0
             }
             let data ={
                 id: this.product.id,
                 flavour: this.product.flavour,
             }
-            this.$store.dispatch('decrementQte', data).then(() => {
+            this.$store.dispatch('decrementQty', data).then(() => {
                 let item = {
                     old_price_id: this.product.price_id,
                     price_id: this.product.price_id,
-                    quantity: this.qte_final
+                    quantity: this.qty_final
                 }
                 this.$emit('updateLine', item)
             })

@@ -131,7 +131,7 @@ export default {
           let subTotal = 0
           if(this.cart.length > 0){
             this.cart.forEach(element => {
-              subTotal += element.price * element.qte
+              subTotal += element.price * element.qty
             });
           }
           return subTotal
@@ -172,7 +172,7 @@ export default {
             this.cart.forEach(async(element) => {
               let data = {
                 id: element.id,
-                qte: element.qte  
+                qty: element.qty  
               }
               await setDoc(doc(db, `users/${auth.currentUser.uid}/orders/${id_order}/products`, data.id), data)
             })
@@ -200,7 +200,7 @@ export default {
         this.cart.forEach(element => {
           let data = {
             price: element.price_id,
-            quantity: element.qte,
+            quantity: element.qty,
           }
           this.lineItems.push(data)
           localStorage.setItem('lineItems', JSON.stringify(this.lineItems))

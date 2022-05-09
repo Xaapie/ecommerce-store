@@ -24,14 +24,14 @@
                             £{{ record.price }}
                         </span>
                     </template>
-                    <template v-else-if="column.key === 'qte'">
+                    <template v-else-if="column.key === 'qty'">
                         <span>
-                            {{ record.qte }}
+                            {{ record.qty }}
                         </span>
                     </template>
                     <template v-else-if="column.key === 'total'">
                         <span>
-                            £{{ (record.qte * record.price).toFixed(2) }}
+                            £{{ (record.qty * record.price).toFixed(2) }}
                         </span>
                     </template>
                     <template v-else-if="column.key === 'action'">

@@ -4,7 +4,7 @@ export default{
             return item.id == data.id && item.flavour == data.flavour
         })
         if(itemSearch.length != 0){
-            itemSearch[0].qte = itemSearch[0].qte + data.qte
+            itemSearch[0].qty = itemSearch[0].qty + data.qty
         }else{
             state.cart.push(data)
         }
@@ -22,19 +22,19 @@ export default{
         })
         state.cart = cart
     },
-    INCREMENT_QTE(state, data){
+    INCREMENT_QTY(state, data){
         let itemSearch = state.cart.filter((item) => {
             return item.id == data.id && item.flavour == data.flavour
         })
-        ++itemSearch[0].qte
+        ++itemSearch[0].qty
     },
-    DECREMENT_QTE(state, data){
+    DECREMENT_QTY(state, data){
         let itemSearch = state.cart.filter((item) => {
             return item.id == data.id && item.flavour == data.flavour
         })
-        --itemSearch[0].qte
-        if(itemSearch.qte < 0){
-            itemSearch[0].qte = 0
+        --itemSearch[0].qty
+        if(itemSearch.qty < 0){
+            itemSearch[0].qty = 0
         }
     },
     CLEAR_CART(state){

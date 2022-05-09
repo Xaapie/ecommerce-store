@@ -23,8 +23,8 @@ const columns = [
   },
   {
     title: 'Quantity',
-    dataIndex: 'qte',
-    key: 'qte',
+    dataIndex: 'qty',
+    key: 'qty',
   },
   {
     title: 'Total',
@@ -71,7 +71,7 @@ export default {
                     if(elm1.id == elm2.id){
                         let item = {
                             ...elm2,
-                            qte: elm1.qte
+                            qty: elm1.qty
                         }
                         this.allProducts.push(item)
                     }
