@@ -111,7 +111,7 @@ export default {
             this.openNotification("success");
             setTimeout(() => {
               this.$router.push("/login");
-            }, 1000);
+            }, 1500);
           })
           .catch(() => {
             this.openNotification("error");
