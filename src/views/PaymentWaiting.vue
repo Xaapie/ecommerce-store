@@ -42,7 +42,7 @@ export default {
     if (localStorage.getItem("waiting")) {
       setTimeout(() => {
         localStorage.removeItem("waiting");
-      }, 1500);
+      }, 2000);
     }
     if (localStorage.getItem("lineItems")) {
       let allItems = JSON.parse(localStorage.getItem("lineItems"));
@@ -50,7 +50,7 @@ export default {
       if (this.lineItems.length > 0) {
         setTimeout(() => {
           this.$refs.checkoutRef.redirectToCheckout();
-        }, 1000);
+        }, 2000);
       }
     }
   },

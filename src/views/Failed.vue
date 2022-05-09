@@ -40,7 +40,7 @@ export default {
                     localStorage.removeItem('user_uid')
                     setTimeout(() => {
                         this.$router.push('/')
-                    },1500)
+                    },5000)
                 })
             })
         }
@@ -49,7 +49,7 @@ export default {
         if(localStorage.getItem('status')){
             setTimeout(() => {
                 localStorage.removeItem('status')
-            }, 1500);
+            }, 5000);
         }
 
         //we clear the cart after the payment is done
