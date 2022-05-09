@@ -42,7 +42,7 @@ export default {
     if (localStorage.getItem("waiting")) {
       setTimeout(() => {
         localStorage.removeItem("waiting");
-      }, 1500);
+      }, 2000);
     }
     if (localStorage.getItem("lineItems")) {
       let allItems = JSON.parse(localStorage.getItem("lineItems"));

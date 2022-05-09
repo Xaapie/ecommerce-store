@@ -4,8 +4,8 @@
         <div class="payment__card">
             <img src="frontend/img/gifs/success.gif" alt=""/>
             <h2>Payment Successful</h2>
-            <p><b>Thank you for your billing</b>, your order is confirmed, you can check the orders page to have more details.</p>
-            <p>You will be redirected to Homepage in few moments...</p>
+            <p><b>Thank you for your payment!</b> Your order is confirmed, you can check the orders page to view your order details.</p>
+            <p>You will be redirected to Homepage in 5 seconds...</p>
         </div>
     </Layout>
 </template>
@@ -41,7 +41,7 @@ export default {
                     localStorage.removeItem('user_uid')
                     setTimeout(() => {
                         this.$router.push('/')
-                    },1500)
+                    },5000)
                 })
             })
         }

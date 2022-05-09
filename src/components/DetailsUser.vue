@@ -58,7 +58,7 @@ export default{
                 this.loading = false;
                 setTimeout(() => {
                     this.success = false;
-                },1500)
+                },1000)
             }).catch(() => {
                 this.loading = false;
             })
