@@ -5,62 +5,66 @@
       <TitlePage title="Cart"/>
       <!--================Cart Area =================-->
       <section class="cart_area section_padding">
-        <div  v-if="cart.length > 0"  class="container-fluid">
-          <a-alert v-if="!checkShipping" style="margin-bottom: 10px;" message="Please update your shipping address on the Dashboard before proceeding to checkout" type="error" />
-          <div class="cart_inner">
-            <div class="table-responsive">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">Product</th>
-                    <th scope="col">Flavour</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Quantity</th>
-                    <th scope="col">Total</th>
-                    <th scope="col"></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr v-for="product in cart" :key="product.id">
-                    <ProductCart :product="product" @updateLine="updateLineItems"/>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                      <h5>Subtotal</h5>
-                    </td>
-                    <td>
-                      <h5>£{{subTotal.toFixed(2)}}</h5>
-                    </td>
-                  </tr>
-                  <tr class="shipping_area">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                      <h5></h5>
-                    </td>
-                    <td>
-                      <div class="shipping_box">
-                        <ul class="list">
-                          <li>
-                            Free Shipping
-                            <input type="radio" aria-label="Radio button for following text input" checked="checked">
-                          </li>
-                        </ul>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="checkout_btn_inner float-right">
-                <a-button type="primary" size="larger" @click="redirect">Continue Shopping</a-button>
-                <a-button v-if="!checkShipping" type="primary" size="larger" style="margin-left: 10px;" @click="submit" disabled>Proceed to checkout</a-button>
-                <a-button v-else type="primary" size="larger" style="margin-left: 10px;" @click="submit">Proceed to checkout</a-button>
+        <div  v-if="cart.length > 0"  class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <a-alert v-if="!checkShipping" style="margin-bottom: 10px;" message="Please update your shipping address on the Dashboard before proceeding to checkout" type="error" />
+              <div class="cart_inner">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Product</th>
+                        <th scope="col">Flavour</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Total</th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr v-for="product in cart" :key="product.id">
+                        <ProductCart :product="product" @updateLine="updateLineItems"/>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                          <h5>Subtotal</h5>
+                        </td>
+                        <td>
+                          <h5>£{{subTotal.toFixed(2)}}</h5>
+                        </td>
+                      </tr>
+                      <tr class="shipping_area">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                          <h5></h5>
+                        </td>
+                        <td>
+                          <div class="shipping_box">
+                            <ul class="list">
+                              <li>
+                                Free Shipping
+                                <input type="radio" aria-label="Radio button for following text input" checked="checked">
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="checkout_btn_inner float-right">
+                    <a-button type="primary" size="larger" @click="redirect">Continue Shopping</a-button>
+                    <a-button v-if="!checkShipping" type="primary" size="larger" style="margin-left: 10px;" @click="submit" disabled>Proceed to checkout</a-button>
+                    <a-button v-else type="primary" size="larger" style="margin-left: 10px;" @click="submit">Proceed to checkout</a-button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -119,7 +123,9 @@ export default {
         },
 
         checkShipping(){
-          if(this.user && this.user.shippingAddress != ''){
+          console.log('==============')
+          console.log(this.user)
+          if(this.user && this.user.streetAddress != '' || this.user.town != '' || this.user.postCode != ''){
             return true
           }else{
             return false
@@ -143,7 +149,7 @@ export default {
       },
       //Get the number of orders
       async getOrdersNumber(){
-        let number = 0;
+        let number = 1;
         const q = query(collection(db, `users/${auth.currentUser.uid}/orders`))
         const querySnap = await getDocs(q);
         querySnap.forEach(() => {
@@ -163,7 +169,9 @@ export default {
             order_date: new Date(Date.now()).toLocaleString(),
             total_price: this.subTotal,
             status: 'Payment Failed',
-            shipping_address: this.user.shippingAddress
+            streetAddress: this.user.streetAddress,
+            town: this.user.town,
+            postCode: this.user.postCode,
           }
 
           let id_order= 'OrderNum_' + resp
@@ -195,6 +203,7 @@ export default {
       }
     },
     mounted(){
+      console.log(this.user)
       if(this.cart.length > 0){
         console.log(auth.currentUser)
         this.cart.forEach(element => {

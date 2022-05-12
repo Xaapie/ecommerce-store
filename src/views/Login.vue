@@ -93,8 +93,8 @@ export default {
                 });
             }else{
                 notification['error']({
-                    message: 'Oops!',
-                    description:'Please verify your email or password',
+                    message: 'Username or Password is incorrect',
+                    description:'Please note that your account will be locked after 5 failed attempts',
                 });
             }
         },
@@ -128,8 +128,6 @@ export default {
                             this.$store.dispatch('sendEmail')
                         }
                     }else{
-                        console.log('Hey')
-                        console.log(this.attemptCount)
                         ++this.attemptCount
                         if(this.attemptCount === 5){
                             this.attemptCount = 0
@@ -139,6 +137,8 @@ export default {
                         this.openNotification('error')
                     }
                 })
+            }else{
+                this.loading = false;
             }
         }
     }
