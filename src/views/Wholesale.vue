@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <img src="/frontend/img/other_images/Wholesale.png" alt="">
+                    <img style="width:100%;" src="/frontend/img/other_images/Wholesale.png" alt="">
                 </div>
                 <div class="col-md-6">
                     <h1>Become a Wholesaler?</h1>

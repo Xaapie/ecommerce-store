@@ -7,6 +7,11 @@
                 <!-- Single Slider -->
                 <div class="single-slider slider-height d-flex align-items-center slide-bg">
                     <div class="container">
+                        <div class="row text-center">
+                            <div class="col-md-12">
+                                <img style="width: 100%; margin-top:20px;" src="/frontend/img/other_images/Nicotine.png" alt=""/>
+                            </div>
+                        </div>
                         <div class="row justify-content-between align-items-center">
                             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
                                 <div class="hero__caption">

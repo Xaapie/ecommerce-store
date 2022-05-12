@@ -24,4 +24,10 @@ export default {
   name: "VideoCard",
 };
 </script>
-<style></style>
+<style>
+
+.video-area{
+  background-position: center;
+}
+
+</style>

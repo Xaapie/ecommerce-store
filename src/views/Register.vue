@@ -183,8 +183,8 @@ export default {
       });
       if (type == "success") {
         notification["success"]({
-          message: "Welcome",
-          description: "Welcome to our store",
+          message: "Verify Account",
+          description: "Please verify your email to login in",
         });
       } else {
         notification["error"]({
@@ -199,7 +199,9 @@ export default {
         firstName: this.formState.firstName,
         lastName: this.formState.lastName,
         email: this.formState.email,
-        shippingAddress: "",
+        streetAddress: "",
+        town: "",
+        postCode: "",
       };
 
       await setDoc(doc(db, "users", auth.currentUser.uid), infos);
@@ -231,12 +233,15 @@ export default {
           } else {
             this.checkEmail = true;
             this.loading = false;
+            this.openNotification("success");
             setTimeout(() => {
               this.checkEmail = false;
             }, 1000);
             this.$router.push("/login");
           }
         });
+      }else{
+        this.loading = false;
       }
     },
   },

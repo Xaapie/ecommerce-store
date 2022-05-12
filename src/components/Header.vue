@@ -20,20 +20,20 @@
                                         <router-link to="/wholesale">Wholesale</router-link>
                                     </li>
                                     <li><router-link to="/contact">Contact</router-link></li>
-                                    <li>
-                                        <a-input-search
-                                            v-model:value="search"
-                                            placeholder="Search"
-                                            style="width: 200px"
-                                            @search="onSearch"
-                                        />
-                                    </li>
+                                    
                                 </ul>
                             </nav>
                         </div>
                         <!-- Header Right -->
-                        <div class="header-right">
+                        <div class="header-right-custom">
                             <ul>
+                                <li>
+                                    <a-input-search
+                                        v-model:value="search"
+                                        placeholder="Search"
+                                        @search="onSearch"
+                                    />
+                                </li>
                                 <li v-if="!userInfo"><router-link to="/login"><span class="flaticon-user"></span></router-link></li>
                                 <li v-else class="select__menu__user">
                                     <a-dropdown v-if="userInfo">
@@ -118,6 +118,7 @@ export default {
 }
 </script>
 <style scoped>
+
     .flaticon-shopping-cart{
         padding-right: 5px !important;
     }
@@ -145,5 +146,21 @@ export default {
     }
     .anticon-down{
         padding: 0 5px !important;
+    }
+
+    li{
+        margin: 15px;
+    }
+
+    @media only screen and (max-width: 1147px) {
+        li{
+            margin: 5px;
+        }
+    }
+
+    .header-right-custom ul{
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
     }
 </style>
