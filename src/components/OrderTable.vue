@@ -1,6 +1,6 @@
 <!-- Custmers Order List page -->
 <template>
-    <div class="container-fluid desktop_card">
+    <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-10">
                 <a-table :columns="columns" :data-source="data">
@@ -46,15 +46,7 @@
                     </template>
                     <template v-else-if="column.key === 'shipping'">
                         <span>
-                            <a-tag>
-                                Street Address :{{ record.streetAddress }}
-                            </a-tag>
-                            <a-tag>
-                                Town/City :{{ record.town }}
-                            </a-tag>
-                            <a-tag>
-                                Postcode :{{ record.postCode }}
-                            </a-tag>
+                            <a-tag>{{ record.shipping_address ? record.shipping_address : "Default" }}</a-tag>
                         </span>
                     </template>
                     <template v-else-if="column.key === 'order_date'">
@@ -104,16 +96,6 @@ export default {
 };
 </script>
 <style scoped>
-
-.desktop_card{
-    display: block;
-}
-
-@media screen and (max-width:900px) {
-    .desktop_card{
-        display: none;
-    }
-}
 .image__product{
     width: 115px;
     margin-right: 20px;

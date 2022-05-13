@@ -42,14 +42,16 @@ export default {
 
         getProducts(){
             if(this.$route.params.id){
-                return this.products.filter((item) => item.name.toLowerCase().includes(this.$route.params.id.toLowerCase()))
+                return this.products.filter((item) => item.name.toLowerCase().includes(this.$route.params.id))
             }else{
                 return this.products
             }
         }
     },
     mounted(){
-        
+        if(this.$route.params.id){
+            console.log('Route Contain')
+        }
     }
 }
 </script>

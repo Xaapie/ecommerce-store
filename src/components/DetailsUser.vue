@@ -25,20 +25,8 @@
                         <input type="text" class="form-control" id="inputLastName" placeholder="Enter Last Name" v-model="formState.lastName">
                     </div>
                     <div class="form-group">
-                        <label for="inputBirth">Date of birth</label>
-                        <input type="date" class="form-control" id="inputBirth" placeholder="Enter Date of birth" v-model="formState.birthDate">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputStreet">Street Address</label>
-                        <textarea class="form-control" id="inputStreet" rows="3" v-model="formState.streetAddress"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputTown">Town/City</label>
-                        <input type="text" class="form-control" id="inputTown" placeholder="Enter Town/City" v-model="formState.town">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputPostCode">Postcode</label>
-                        <input type="text" class="form-control" id="inputPostCode" placeholder="Enter Postcode" v-model="formState.postCode">
+                        <label for="exampleFormControlTextarea1">Shipping Address</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" v-model="formState.shippingAddress"></textarea>
                     </div>
                     <button type="submit" class="btn btn-danger" style="float: right;">{{loading ? 'Loading':'Update'}}</button>
                 </form>

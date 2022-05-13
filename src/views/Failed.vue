@@ -1,17 +1,11 @@
 <!-- Failed orders-->
 <template>
     <Layout>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="payment__card">
-                        <img src="frontend/img/gifs/failed.gif" alt=""/>
-                        <h2>Payment Failed</h2>
-                        <p><b>Don't worry your money is safe!</b> If money was debited from your account, it will be refunded automatically in 5-7 working days.</p>
-                        <p>You will be redirected to Homepage in 5 seconds...</p>
-                    </div>
-                </div>
-            </div>
+        <div class="payment__card">
+            <img src="frontend/img/gifs/failed.gif" alt=""/>
+            <h2>Payment Failed</h2>
+            <p><b>Don't worry your money is safe!</b> If money was debited from your account, it will be refunded automatically in 5-7 working days.</p>
+            <p>You will be redirected to Homepage in 5 seconds...</p>
         </div>
     </Layout>
 </template>
@@ -71,7 +65,7 @@ export default {
 <style>
 .payment__card{
     text-align: center;
-    width: 100%;
+    width: 500px;
     margin: auto;
 }
 

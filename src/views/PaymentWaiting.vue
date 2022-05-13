@@ -1,25 +1,19 @@
 <!-- Payment waiting animation-->
 <template>
   <Layout>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="payment__card">
-            <img src="frontend/img/gifs/card.gif" alt="" />
-            <p>You will be redirected to payment page in few moments....</p>
-          </div>
-          <stripe-checkout
-            ref="checkoutRef"
-            mode="payment"
-            :pk="publishableKey"
-            :line-items="lineItems"
-            :success-url="successURL"
-            :cancel-url="cancelURL"
-            @loading="(v) => (loading = v)"
-          />
-        </div>
-      </div>
+    <div class="payment__card">
+      <img src="frontend/img/gifs/card.gif" alt="" />
+      <p>You will be redirected to payment page in few moments....</p>
     </div>
+    <stripe-checkout
+      ref="checkoutRef"
+      mode="payment"
+      :pk="publishableKey"
+      :line-items="lineItems"
+      :success-url="successURL"
+      :cancel-url="cancelURL"
+      @loading="(v) => (loading = v)"
+    />
   </Layout>
 </template>
 <script>
@@ -65,7 +59,7 @@ export default {
 <style>
 .payment__card {
   text-align: center;
-  width: 100%;
+  width: 500px;
   margin: auto;
 }
 

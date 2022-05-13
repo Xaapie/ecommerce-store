@@ -1,17 +1,11 @@
 <!-- orders completed successfully-->
 <template>
     <Layout>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="payment__card">
-                        <img src="frontend/img/gifs/success.gif" alt=""/>
-                        <h2>Payment Successful</h2>
-                        <p><b>Thank you for your payment!</b> Your order is confirmed, you can check the orders page to view your order details.</p>
-                        <p>You will be redirected to Homepage in 5 seconds...</p>
-                    </div>
-                </div>
-            </div>
+        <div class="payment__card">
+            <img src="frontend/img/gifs/success.gif" alt=""/>
+            <h2>Payment Successful</h2>
+            <p><b>Thank you for your payment!</b> Your order is confirmed, you can check the orders page to view your order details.</p>
+            <p>You will be redirected to Homepage in 5 seconds...</p>
         </div>
     </Layout>
 </template>
@@ -72,7 +66,7 @@ export default {
 <style>
 .payment__card{
     text-align: center;
-    width: 100%;
+    width: 500px;
     margin: auto;
 }
 

@@ -31,8 +31,8 @@ const routes = [
     name: 'Register',
     component: Register,
     beforeEnter: (to, from, next) => {
-      if(store.state.auth.user){
-        if(store.state.auth.user.emailVerified){
+      if(auth.currentUser){
+        if(auth.currentUser.emailVerified){
           next('/')
         }
       }

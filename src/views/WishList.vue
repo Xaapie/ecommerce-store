@@ -2,14 +2,12 @@
 <template>
     <Layout>
         <TitlePage title="Wish List"/>
-        <ProductTable :columns="columns" :data="dataRefresh" @updateWish="updateWish"/>
-        <ProductTableMobile :data="dataRefresh" @updateWish="updateWish"/>
+        <ProductTable :columns="columns" :data="dataRefresh"/>
     </Layout>
 </template>
 <script>
 import TitlePage from '@/components/TitlePage'
 import Layout from '@/views/layouts/Layout'
-import ProductTableMobile from '@/components/ProductTableMobile'
 import ProductTable from '@/components/ProductTable'
 import { mapGetters } from 'vuex'
 const columns = [
@@ -27,9 +25,6 @@ const columns = [
     title: 'Action',
     key: 'action',
   },
-  {
-    key: 'actions',
-  },
 ];
 
 export default {
@@ -37,8 +32,7 @@ export default {
     components:{
         Layout,
         ProductTable,
-        TitlePage,
-        ProductTableMobile
+        TitlePage
     },
     data(){
         return{
@@ -55,11 +49,6 @@ export default {
             return this.data;
         }
     },  
-    methods:{
-        updateWish(id){
-            this.data = this.data.filter((item) => item.id != id)
-        }
-    },
     created(){
         //Get all products from firebase and then verify the products in wishlist
         this.$store.dispatch('getProducts').then(() => {

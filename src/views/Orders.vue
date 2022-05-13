@@ -3,14 +3,12 @@
     <Layout>
         <TitlePage title="Orders List"/>
         <OrderTable :columns="columns" :data="dataRefresh"/>
-        <OrderTableMobile :data="dataRefresh"/>
     </Layout>
 </template>
 <script>
 import TitlePage from '@/components/TitlePage'
 import Layout from '@/views/layouts/Layout'
 import OrderTable from '@/components/OrderTable'
-import OrderTableMobile from '@/components/OrderTableMobile'
 import { mapGetters } from 'vuex'
 const columns = [
   {
@@ -49,8 +47,7 @@ export default {
     components:{
         Layout,
         OrderTable,
-        TitlePage,
-        OrderTableMobile
+        TitlePage
     },
     data(){
         return{
