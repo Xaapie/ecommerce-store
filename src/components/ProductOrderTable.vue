@@ -1,7 +1,7 @@
 <!-- Product details page -->
 <template>
     <div class="container-fluid">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center desktop_card">
             <div class="col-md-10">
                 <a-table :columns="columns" :data-source="data">
                     <template #headerCell="{ column }">
@@ -62,6 +62,15 @@ export default {
 };
 </script>
 <style scoped>
+.desktop_card{
+    display: flex;
+}
+
+@media screen and (max-width:900px) {
+    .desktop_card{
+        display: none;
+    }
+}
 .image__product{
     width: 115px;
     margin-right: 20px;
